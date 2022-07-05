@@ -4,10 +4,10 @@
 
 ### 220705
 
-<a href="https://leesaewa.github.io/react_study/220705_TIL/converter.html">state로 converter만들기</a>
+<a href="https://leesaewa.github.io/react_study/converter.html">state로 converter만들기</a>
 
-- <a href="https://github.com/leesaewa/react_study/220705_TIL/state.md">State</a>
-- <a href="https://github.com/leesaewa/react_study/220705_TIL/label_JSX.md">Label JSX</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/220705_TIL/state.md">State</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/220705_TIL/label_JSX.md">Label JSX</a>
 
 ---
 

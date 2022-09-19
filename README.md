@@ -4,7 +4,9 @@
 
 ### 220919
 
-<a href="https://github.com/leesaewa/react_study/blob/main/220919_TIL/props.md">Props</a>
+<a href="https://leesaewa.github.io/react_study/220919_TIL/props.html">Props 연습</a>
+
+- <a href="https://github.com/leesaewa/react_study/blob/main/220919_TIL/props.md">Props</a>
 
 ### 220705
 

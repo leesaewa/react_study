@@ -2,6 +2,10 @@
 
 ## Log
 
+### 220919
+
+<a href="https://github.com/leesaewa/react_study/blob/main/220919_TIL/props.md">Props</a>
+
 ### 220705
 
 <a href="https://leesaewa.github.io/react_study/converter.html">state로 converter만들기</a>

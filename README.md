@@ -4,15 +4,19 @@
 
 ### 220919
 
-<a href="https://leesaewa.github.io/react_study/220919_TIL/props.html">Props 연습</a>
-<a href="https://leesaewa.github.io/react_study/220919_TIL/props2.html">Props function 연습</a>
+#### <a href="https://leesaewa.github.io/react_study/220919_TIL/props.html">Props 연습</a>
+
+#### <a href="https://leesaewa.github.io/react_study/220919_TIL/props2.html">Props function 연습</a>
+
+#### <a href="https://leesaewa.github.io/react_study/220919_TIL/props_types.html">Prop types 연습</a>
 
 - <a href="https://github.com/leesaewa/react_study/blob/main/220919_TIL/props.md">Props</a>
 - <a href="https://github.com/leesaewa/react_study/blob/main/220919_TIL/props.md#memo">memo</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/220919_TIL/props.md#prop-types">prop types</a>
 
 ### 220705
 
-<a href="https://leesaewa.github.io/react_study/converter.html">state로 converter만들기</a>
+#### <a href="https://leesaewa.github.io/react_study/converter.html">state로 converter만들기</a>
 
 - <a href="https://github.com/leesaewa/react_study/blob/main/220705_TIL/state.md">State</a>
 - <a href="https://github.com/leesaewa/react_study/blob/main/220705_TIL/label_JSX.md">Label JSX</a>

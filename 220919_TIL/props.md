@@ -119,3 +119,30 @@ const changeValue = () => setValue("Revers Changes");
 ## React.memo()
 
 - 컴포넌트가 `React.memo()`로 wrapping 될 때, React는 컴포넌트를 렌더링하고 결과를 메모이징(Memoizing)한다. 그리고 다음 렌더링이 일어날 때 props가 같다면, React는 메모이징(Memoizing)된 내용을 재사용한다.
+
+---
+
+# prop Types
+
+- **오타 조심**... 선언할 때는 `propTypes`. 사용할 때는 `PropTypes`.
+
+#### 예시 코드
+
+```
+Btn.propTypes = {
+  text: PropTypes.string.isRequired,
+  fontSize: PropTypes.number,
+};
+```
+
+- 프론트에서 component를 구성하기 위해 매개변수(prop)을 받을 떄 prop의 필요한 타입의 정보가 넘어오지 않아 문제가 생길 수 있음. (syntax 에러로 잡아주지 않기 때문)
+- 이를 해결하기 위해서 `A` 라는 컴포넌트의 prop의 타입을 결정지을 필요가 있음.
+
+```
+A.propTypes = {
+prop: PropTypes.[원하는 타입].[prop의 필수 여부 판단]
+}
+```
+
+- 위의 형태의 정보를 제공할 경우 prop 을 제어할 수 있음.
+- PropTypes로 전달하는 데이터는 `default optional`이고 만일 반드시 보내야 할 데이터 같은 경우 `.isRequired`를 붙이면 필수 항목이 됨.

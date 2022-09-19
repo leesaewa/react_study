@@ -74,3 +74,51 @@ fontSize: big ? 18 : 16,
 #### 결과물
 
 <img src="https://user-images.githubusercontent.com/97646713/190973451-f1c1f630-d85b-47ac-b00b-3c1f3d19be6d.jpg">
+<!--
+
+-->
+
+## function
+
+- `text`, `boolean` 뿐만 아니라 `function`도 보낼 수 있음.
+- 이것은 JSX로 html 태그 자체에 이벤트 리스너를 넣는것과는 전혀 다른 것임. 그저 이벤트를 실행시키는 함수가 프로퍼티로 들어간 것임. `prop`은 그냥 부모에서 자식으로 데이터를 넘길 때 사용하는 `argument(인자)`의 역할이니까.
+  - 컴포넌트 안에 `onClick`을 넣으면 `이벤트 리스너`가 아닌 `props` 중에 하나가 됨.
+  - 즉, 컴포넌트 안에 무언가를 설정하면 무조건 `props`가 될 뿐. 실제로 `html 태그` 안에 들어가지 못함.
+
+#### 예시 코드
+
+```
+function Btn({ text, changeValue }) {
+  <button
+    onClick={changeValue}
+.
+.
+.
+// save change 버튼을 누르면 revers change로 텍스트가 바뀌는 함수를 설정.
+const [value, setValue] = React.useState("Save Change");
+const changeValue = () => setValue("Revers Changes");
+.
+.
+.
+<Btn text={value} changeValue={changeValue} />
+<Btn text="Continue" />
+```
+
+<img src="https://user-images.githubusercontent.com/97646713/190977200-a338aa5c-92f1-4fc2-8870-f5c0f00a5345.jpg">
+
+#### 결과물
+
+<img src="https://user-images.githubusercontent.com/97646713/190977942-cf7c1351-0128-413c-98e6-556bed50f809.jpg">
+
+---
+
+# memo
+
+- `memorize(기억되다)`는 뜻.
+- 불필요한 `re-render`는 `React.memo()`로 관리할 수 있음
+  - 컴포넌트가 새로 그려질 때, 변경된 부분만 `re render`하도록 함.
+- 부모 컴포넌트의 state를 변경하면 당연히 그 자식 컴포넌트들도 Re-render가 일어남. 불필요한 렌더링이 발생할 수도 있는데, 이 경우에는 `React.memo()`로 `prop`의 변경이 일어난 부분만 렌더링 시킬 수 있음. 아주 많은 자식 컴포넌트를 가지고 있는 부모 컴포넌트일 때 사용하면 됨.
+
+## React.memo()
+
+- 컴포넌트가 `React.memo()`로 wrapping 될 때, React는 컴포넌트를 렌더링하고 결과를 메모이징(Memoizing)한다. 그리고 다음 렌더링이 일어날 때 props가 같다면, React는 메모이징(Memoizing)된 내용을 재사용한다.

@@ -74,9 +74,6 @@ fontSize: big ? 18 : 16,
 #### 결과물
 
 <img src="https://user-images.githubusercontent.com/97646713/190973451-f1c1f630-d85b-47ac-b00b-3c1f3d19be6d.jpg">
-<!--
-
--->
 
 ## function
 

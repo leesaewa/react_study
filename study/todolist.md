@@ -16,6 +16,7 @@
 ------
 
 # map() 함수
+- 배열 내의 모든 요소 각각에 대하여, 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환
 - 배열을 가지고 있을 때 각각의 element들을 바꿀 수 있게 해줌.
 - `map()` 은 `()`에 함수를 넣을 수 있는데 배열의 모든 item에 대해 실행됨.
   - 즉, 배열에 6개의 item이 있다면 6번 함수가 실행됨. 그리고 그 함수로부터 내가 return한 값은 새로운 배열에 들어가게 함
@@ -69,4 +70,41 @@ const todoItems = todos.map((todo, index) =>
 
 ### 결과물
 <img src="https://user-images.githubusercontent.com/97646713/192516667-b1ef3067-0c73-47db-a3c4-466ce8237761.jpg">
+
+
+------
+
+# Filter()
+- 주어진 함수의 테스트를 통과하는 모든 요소를 모아(true면 요소를 유지, false면 버림) 새로운 배열을 반환하는 함수.
+- callback 함수는 호출되는 배열을 변화시키지 않음.
+
+> callback 함수는 3개의 인수와 함께 호출됨.
+> 1. 처리할 현재(대상) 요소값
+> 2. 처리할 현재(대상) 요소의 인덱스
+> 3. filter을 호출한 배열 객체(=순회되는 배열 객체)
+
+## 필터링
+- 내가 원하는 값들을 필터링 할 수 있음.
+
+```
+notes={notes.filter((note) =>
+	note.text.toLowerCase().includes(searchText)
+)}
+```
+- `notes`배열에 들어있는 `note.text`가 `searchText`를 포함하고 있으면 `notes`배열로 구성
+
+## 삭제
+- 배열을 삭제할 수 있음.
+- 단순히 부모요소를 삭제하는게 아닌 `배열에 들어가있는 index`와 `삭제할(버튼의 li) index`를 찾아서 삭제할 경우
+
+```
+const onDelete = (index) => {
+  setToDos(toDos.filter((item, todoIndex) => index !== todoIndex));
+};
+
+<button onClick={() => onDelete(index)}>Delete</button>
+```
+- `filter` 함수에 넣는 `두 번째 인자`는 `todos 배열에 있는 요소의 index`가 들어간다.
+- `onDelete={onDelete}` 가 아니라 `onClick={() => onDelete(index)}`로 쓰는 이유는 `바로 실행`되지 않고 `클릭을 기다리는 함수`로 쓰기 위함.
+
 

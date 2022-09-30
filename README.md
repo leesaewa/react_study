@@ -1,5 +1,9 @@
 # react_study (개인용 리액트 공부 기록용)
 
+## 그 외 유용한 것
+1. <a href="https://github.com/leesaewa/react_study/blob/main/study/%EB%B0%B0%ED%8F%AC.md">깃허브 페이지에 배포하기</a>
+2. <a href="https://github.com/leesaewa/react_study/blob/main/study/icon.md">React-icon 사용하기</a>
+
 ## Log
 
 ### 220919

@@ -3,8 +3,16 @@
 ## 그 외 유용한 것
 1. <a href="https://github.com/leesaewa/react_study/blob/main/study/%EB%B0%B0%ED%8F%AC.md">깃허브 페이지에 배포하기</a>
 2. <a href="https://github.com/leesaewa/react_study/blob/main/study/icon.md">React-icon 사용하기</a>
+3. <a href=""></a>
 
 ## Log
+
+
+
+#### <a href="https://github.com/leesaewa/react_study/blob/main/study/react-router.md">react router</a>
+
+#### <a href="https://github.com/leesaewa/react_study/blob/main/study/todolist.md#map-%ED%95%A8%EC%88%98">map()</a>
+#### <a href="https://github.com/leesaewa/react_study/blob/main/study/todolist.md#filter">filter</a>
 
 ### 220919
 

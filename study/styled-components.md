@@ -134,5 +134,62 @@ function App() {
 - `&:hover {style내용}`
 - 가상(의사) 클래스도 마찬가지. `::before` `::active`~~
 
+
+## 컴포넌트 그대로를 사용하고 싶을 때
+- 예를 들어, 위의 예시에서 `span`이 아닌 `p`로 바꿀 때는 styled까지 `p`로 바꿔야 하는 번거로움이 있음.
+- 귀찮으니까 `span`을 컴포넌트로 사용하고 `style`에 적용하는 법
+
+#### 예시
+```
+<!-- span으로 지정했 -->
+const Emoji = styled.span`
+  font-size: 36px;
+`;
+
+const Box = styled.div`
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ${rotation} 1s linear infinite;
+
+<!-- 변수에 담아 사용 -->
+  ${Emoji}:hover {
+    font-size: 98px;
+  }
+`;
+
+function App() {
+  return (
+    <Wrapper>
+      <Box>
+<!--    p로 바꿈    -->
+        <Emoji as="p">hi</Emoji>
+      </Box>
+    </Wrapper>
+  );
+}
+```
+
+
 --------
+
+<a href="https://github.com/leesaewa/react-practice2/commit/fb8b5e3023b5be64bf12911c4445c816c29c73f2">코드 확인</a>
+
+
+## Themes
+- 기본적으로 모든 색상들을 가지고 있는 `object`
+- 나중에 색상을 바꾸고 싶을 때 `object`만 바꿔주면 됨.
+- `<ThemeProvider theme={darkTheme}>`
+
+### Theming
+- styled components는 ThemeProvider wrapper 컴포넌트를 통해 전체 테마를 지원함.
+- 이 컴포넌트는 컨텍스트 API를 통해 자체 아래에 있는 모든 React 구성 요소에 테마를 제공함.
+- 렌더 트리에서 모든 스타일 구성 요소는 여러 수준의 깊이에 있는 경우에도 제공된 테마에 액세스할 수 있음.
+
+### The theme prop
+- theme는 theme prop을 사용하여 컴포넌트로 전달될 수도 있음.
+  - `color: ${(props) => props.theme.textColor};`
 

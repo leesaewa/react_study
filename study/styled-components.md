@@ -41,3 +41,29 @@ function App() {
   );
 }
 ```
+
+## 중복되는 코드 재사용할 떄
+- `props`를 이용한다.
+  - 중복되는 코드에 `background-color: ${(props) => props.bgColor};`로 설정.
+  - 컴포넌트는 `<Box bgColor="teal"></Box>` `<Box bgColor="tomato" />`
+
+### 컴포넌트 확장(상속)
+- 기존 컴포넌트의 모든 속성을 들고 와서 전ㅂ 복붙하고 새로운 속성까지 더해주는 것.
+
+- (위 코드의 연속.) 특정 Box에만 `border-radius`를 적용하고 싶을 때 어떻게 사용할 수 있는가?
+  - 그걸 함수로 나타낼 수 있음. `const Circle = styled(Box)`border-radius: 50px;`;`
+  - Box의 모든 속성들을 들고 온 다음, `border-radius`를 추가적으로 더해줌.
+
+### style은 그대로 상속받으면서 html태그만 변경하고 싶을 때
+- `as=""`를 추가하면 됨.
+- `as` `href`는 `styled-components`에서 사용할 수 있는 `props`임.
+```
+<Btn>Login</Btn>
+<Btn as="a" href="/">
+  Login
+</Btn>
+ ```
+ 
+ ### html 속성을 넣고 싶을 때
+ - `const Inpuut = styled.input.attrs({ required: true })` 이렇게 넣을 수 있음.
+ 

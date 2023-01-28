@@ -42,7 +42,9 @@ function App() {
 }
 ```
 
-## 중복되는 코드 재사용할 떄
+<a href="https://github.com/leesaewa/react-practice2/commit/a1c575692c27cd907cd6143f06f112cb11caa4dc">코드 확인</a>
+
+## 중복되는 코드 재사용
 - `props`를 이용한다.
   - 중복되는 코드에 `background-color: ${(props) => props.bgColor};`로 설정.
   - 컴포넌트는 `<Box bgColor="teal"></Box>` `<Box bgColor="tomato" />`
@@ -66,4 +68,71 @@ function App() {
  
  ### html 속성을 넣고 싶을 때
  - `const Inpuut = styled.input.attrs({ required: true })` 이렇게 넣을 수 있음.
- 
+
+
+-----------
+<a href="https://github.com/leesaewa/react-practice2/commit/2b32c2b85dd92df2684e4882af8a55941dc3d3a7">코드 확인</a>
+
+## animation
+- 스타일 컴포넌트에서는 `keyframes helper`를 사용시 앱 전체에서 사용할 수 있는 고유한 인스턴스를 생성함.
+  - (다른 파일에서 같은 이름의 `keyframes`가 존재하더라도 이름 충돌이 나지 않도록 해줌.)
+  - 개발자 도구로 확인할 시, 클래스 명처럼 애니메이션 이름 또한 랜덤으로 생성해줌.
+  - `animation: dvrYCw 1s linear infinite`
+
+#### 사용법
+- `keyframes`를 `import`해줌.
+- 아래처럼 작성
+```
+const rotation = keyframes`
+  0% {
+    transform: rotate(0deg);
+    border-radius: 0px;
+  }
+  50% {
+    border-radius: 100px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 0px;
+  }
+`;
+```
+- 해당 애니메이션을 사용할 곳에 아래처럼 작성.
+  - `animation: ${rotation} 1s linear infinite;`
+
+
+## 선택자
+- `SASS`처럼 `Box`안에 있는 `span`을 선택해서 스타일 지정해줄 수 있음.
+```
+const Box = styled.div`
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ${rotation} 1s linear infinite;
+
+<!-- 선택자 -->
+  span {
+    font-size: 36px;
+  }
+`;
+
+function App() {
+  return (
+    <Wrapper>
+      <Box>
+        <span>hi</span>
+      </Box>
+    </Wrapper>
+  );
+}
+```
+### hover
+- `hover` 또한 `SASS` 작성하는 것과 같음.
+- `&:hover {style내용}`
+- 가상(의사) 클래스도 마찬가지. `::before` `::active`~~
+
+--------
+

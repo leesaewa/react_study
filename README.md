@@ -7,6 +7,13 @@
 
 ## Log
 
+#### <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md">styled-components</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md#%EC%A4%91%EB%B3%B5%EB%90%98%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%9E%AC%EC%82%AC%EC%9A%A9">중복되는 코드 재사용</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md#animation">animation</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md#%EC%84%A0%ED%83%9D%EC%9E%90">선택자</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B7%B8%EB%8C%80%EB%A1%9C%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%84-%EB%95%8C">컴포넌트 그대로를 사용하고 싶을 때</a>
+- <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md#themes">Themes</a>
+
 
 #### <a href="https://github.com/leesaewa/react_study/blob/main/study/useEffect.md#useeffectcallback-">useEffect</a>
 

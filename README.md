@@ -17,6 +17,10 @@
 
 #### <a href="https://github.com/leesaewa/react_study/blob/main/study/useEffect.md#useeffectcallback-">useEffect</a>
 
+#### <a href="https://github.com/leesaewa/react_study/blob/main/study/coin.md#createglobalstyle">createGlobalStyle</a>
+
+#### <a href="https://github.com/leesaewa/react_study/blob/main/study/coin.md#fragment">Fragment</a>
+
 
 
 #### <a href="https://github.com/leesaewa/react_study/blob/main/study/react-router.md">react router</a>

@@ -7,6 +7,8 @@
 
 ## Log
 
+#### <a href="https://github.com/leesaewa/react_study/blob/main/study/typescript.md">Typescript</a>
+
 #### <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md">styled-components</a>
 - <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md#%EC%A4%91%EB%B3%B5%EB%90%98%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%9E%AC%EC%82%AC%EC%9A%A9">중복되는 코드 재사용</a>
 - <a href="https://github.com/leesaewa/react_study/blob/main/study/styled-components.md#animation">animation</a>
